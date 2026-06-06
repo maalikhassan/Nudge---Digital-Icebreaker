@@ -84,14 +84,11 @@ class NudgeProvider extends ChangeNotifier {
   }
 
   // NEW: call Groq API to generate a custom icebreaker line
-  // Replace YOUR_GROQ_API_KEY with your actual key
   Future<void> fetchAIIcebreaker() async {
     if (_selectedScenario == null || _selectedTopic == null) return;
     _aiLoading = true;
     _aiIcebreaker = null;
     notifyListeners();
-
-    print("🔑 Loaded API Key: ${dotenv.env['GROQ_API_KEY']}");
 
     try {
       final prompt = '''
@@ -107,11 +104,11 @@ Only reply with the opening line itself, nothing else.''';
         Uri.parse('https://api.groq.com/openai/v1/chat/completions'),
         headers: {
           'Content-Type': 'application/json',
-          // IMPORTANT: replace with your actual Groq API key
+          // API key is loaded from the .env file.
           'Authorization': 'Bearer ${dotenv.env['GROQ_API_KEY']}',
         },
         body: jsonEncode({
-          'model': 'llama3-8b-8192',  // fast, free Groq model
+          'model': 'llama-3.1-8b-instant',  // currently supported Groq model
           'messages': [
             {'role': 'user', 'content': prompt}
           ],
