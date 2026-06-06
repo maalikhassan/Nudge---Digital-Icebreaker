@@ -94,13 +94,22 @@ class NudgeProvider extends ChangeNotifier {
     notifyListeners();
 
     try {
+      // Map the current locale to a language name for the AI prompt
+      String languageName = 'English';
+      if (_locale.languageCode == 'si') {
+        languageName = 'Sinhala';
+      } else if (_locale.languageCode == 'ta') {
+        languageName = 'Tamil';
+      }
+
       final prompt = '''
 You are a friendly social coach. Give ONE short, natural, funny opening
-line (max 2 sentences) to start a conversation with a stranger.
+line (max 2 sentences) in $languageName language to start a conversation with a stranger.
 Context: they are in a '$_selectedScenario' setting.
 Topic chosen: '$_selectedTopic'.
 Time they have: ${_timeAvailableMinutes ?? 10} minutes.
 Make it warm, low-pressure, and conversation-starting. No cringe.
+IMPORTANT: You MUST write the response only in $languageName.
 Only reply with the opening line itself, nothing else.''';
 
       final response = await http.post(
@@ -115,7 +124,7 @@ Only reply with the opening line itself, nothing else.''';
           'messages': [
             {'role': 'user', 'content': prompt}
           ],
-          'max_tokens': 80,
+          'max_tokens': 100,
           'temperature': 0.8,  // 0=serious, 1=creative
         }),
       );
@@ -197,4 +206,3 @@ Only reply with the opening line itself, nothing else.''';
     notifyListeners();
   }
 }
-
