@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import 'package:vibration/vibration.dart';
 import '../l10n/app_localizations.dart';
 import '../providers/nudge_provider.dart';
 import 'home_screen.dart';
@@ -63,9 +64,17 @@ class _AcceptedViewState extends State<_AcceptedView> {
   Future<void> _tripleHapticPulse() async {
     for (var i = 0; i < 3; i++) {
       await HapticFeedback.heavyImpact();
+      await Future.delayed(const Duration(milliseconds: 80));
+      await HapticFeedback.vibrate();
       if (i < 2) {
         await Future.delayed(const Duration(milliseconds: 160));
       }
+    }
+
+    // On Android devices, trigger actual hardware vibration as a stronger fallback.
+    final hasVibrator = await Vibration.hasVibrator();
+    if (hasVibrator == true) {
+      await Vibration.vibrate(pattern: [0, 240, 110, 240, 110, 240], amplitude: 255);
     }
   }
 
