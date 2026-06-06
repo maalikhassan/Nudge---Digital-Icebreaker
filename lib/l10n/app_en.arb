@@ -1,0 +1,25 @@
+{
+  "@@locale": "en",
+  "appTitle": "Nudge",
+  "tagline": "Break the ice",
+  "selectLanguage": "Hi! Which language do you prefer?",
+  "selectScenario": "Where are you right now?",
+  "onTrain": "On a Train / Bus",
+  "atCafe": "At a Cafe",
+  "inClass": "In Class / Lecture",
+  "waitingRoom": "Waiting Room",
+  "greeting": "Hey! 👋",
+  "iceBreakPrompt": "Someone next to you thought you might want to chat.",
+  "topicsLabel": "Pick a topic to start with:",
+  "topic1": "Music & Movies",
+  "topic2": "Food & Places",
+  "topic3": "Work / Studies",
+  "topic4": "Just vibing, no agenda",
+  "noThanks": "No thanks, I'm good",
+  "thanksMessage": "No worries! Have a great day 😊",
+  "chatStarted": "Great! Show this to each other 👇",
+  "topicChosen": "You chose:",
+  "startOver": "Start Over",
+  "handoverHint": "Hand the phone to them →"
+}
+
