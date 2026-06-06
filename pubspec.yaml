@@ -1,0 +1,21 @@
+name: nudge
+description: Nudge - Digital Icebreaker app
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:     # built-in — gives us Sinhala, Tamil, English
+    sdk: flutter
+  provider: ^6.1.2           # state management
+  wakelock_plus: ^1.2.8      # keeps screen on when phone is handed over
+  shared_preferences: ^2.3.2 # save user's preferred language
+  google_fonts: ^6.2.1       # nice fonts
+
+flutter:
+  generate: true             # required for i18n
+  uses-material-design: true
+
