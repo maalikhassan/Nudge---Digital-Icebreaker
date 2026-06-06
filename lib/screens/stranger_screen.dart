@@ -6,8 +6,36 @@ import 'result_screen.dart';
 
 // ── StrangerScreen v2 ─────────────────────────────────────────
 // NEW: scenario-specific topics + time selection + AI icebreaker
-class StrangerScreen extends StatelessWidget {
+class StrangerScreen extends StatefulWidget {
   const StrangerScreen({super.key});
+
+  @override
+  State<StrangerScreen> createState() => _StrangerScreenState();
+}
+
+class _StrangerScreenState extends State<StrangerScreen> {
+  final TextEditingController _customMinutesController = TextEditingController();
+
+  @override
+  void dispose() {
+    _customMinutesController.dispose();
+    super.dispose();
+  }
+
+  void _applyCustomMinutes(NudgeProvider provider) {
+    final raw = _customMinutesController.text.trim();
+    final parsed = int.tryParse(raw);
+    if (parsed == null || parsed < 1 || parsed > 120) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Enter a valid time between 1 and 120 minutes.'),
+        ),
+      );
+      return;
+    }
+    provider.setTimeAvailable(parsed);
+    FocusScope.of(context).unfocus();
+  }
 
   // Returns topics relevant to the chosen scenario
   // This is the 'intelligent' part — input (scenario) → output (relevant topics)
@@ -92,6 +120,44 @@ class StrangerScreen extends StatelessWidget {
                       children: [5, 10, 15, 20].map((mins) =>
                           _TimeChip(minutes: mins),
                       ).toList(),
+                    ),
+                    const SizedBox(height: 12),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: TextField(
+                            controller: _customMinutesController,
+                            keyboardType: TextInputType.number,
+                            decoration: InputDecoration(
+                              hintText: 'Custom minutes (try 1 for viva demo)',
+                              filled: true,
+                              fillColor: Colors.white,
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(12),
+                                borderSide: BorderSide.none,
+                              ),
+                              contentPadding: const EdgeInsets.symmetric(
+                                horizontal: 12,
+                                vertical: 12,
+                              ),
+                            ),
+                            onSubmitted: (_) => _applyCustomMinutes(provider),
+                          ),
+                        ),
+                        const SizedBox(width: 10),
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color(0xFF7B1FA2),
+                            foregroundColor: Colors.white,
+                            minimumSize: const Size(80, 48),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                          ),
+                          onPressed: () => _applyCustomMinutes(provider),
+                          child: const Text('Set'),
+                        ),
+                      ],
                     ),
                   ],
                 ),

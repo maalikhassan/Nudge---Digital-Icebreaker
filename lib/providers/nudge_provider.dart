@@ -79,6 +79,9 @@ class NudgeProvider extends ChangeNotifier {
   }
 
   void strangerDeclined() {
+    _selectedTopic = null;
+    _accepted = false;
+    _chatStartTime = null;
     _declined = true;
     notifyListeners();
   }
@@ -137,7 +140,9 @@ Only reply with the opening line itself, nothing else.''';
 
   // NEW: save a completed interaction to history
   Future<void> saveInteraction() async {
-    if (_selectedScenario == null || _selectedTopic == null) return;
+    if (_selectedScenario == null) return;
+    // Connected interactions require a chosen topic, declined interactions do not.
+    if (!_declined && _selectedTopic == null) return;
 
     // Calculate actual duration if we have a start time
     int? actualMinutes;
@@ -149,7 +154,7 @@ Only reply with the opening line itself, nothing else.''';
     final interaction = Interaction(
       timestamp: DateTime.now(),
       scenario: _selectedScenario!,
-      topic: _selectedTopic!,
+      topic: _selectedTopic ?? 'Declined',
       plannedMinutes: _timeAvailableMinutes,
       actualMinutes: actualMinutes,
       outcome: _declined ? 'declined' : 'connected',
