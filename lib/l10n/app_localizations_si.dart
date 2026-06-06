@@ -71,4 +71,49 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get handoverHint => 'ඔවුන්ට දෙන්න →';
+
+  @override
+  String get howMuchTime => 'ඔබට කොපමණ වේලාවක් තිබේද?';
+
+  @override
+  String get topic_music => 'සංගීතය';
+
+  @override
+  String get topic_travel => 'ගමන් යාම';
+
+  @override
+  String get topic_tech => 'තාක්ෂණය';
+
+  @override
+  String get topic_memes => 'මීම් සහ විනෝදය';
+
+  @override
+  String get topic_coffee => 'කෝපි ස්ථාන';
+
+  @override
+  String get topic_food => 'ආහාර';
+
+  @override
+  String get topic_work => 'රැකියා';
+
+  @override
+  String get topic_books => 'පොත්';
+
+  @override
+  String get topic_studies => 'විභාග';
+
+  @override
+  String get topic_career => 'වෘත්තීය';
+
+  @override
+  String get topic_gaming => 'ක්‍රීඩා';
+
+  @override
+  String get topic_sports => 'ක්‍රීඩා';
+
+  @override
+  String get topic_shows => 'ටෙලිවිෂන්';
+
+  @override
+  String get topic_vibes => 'ලිහිල් කතාව';
 }

@@ -20,6 +20,21 @@
   "chatStarted": "Great! Show this to each other 👇",
   "topicChosen": "You chose:",
   "startOver": "Start Over",
-  "handoverHint": "Hand the phone to them →"
+  "handoverHint": "Hand the phone to them →",
+  "howMuchTime": "How much time do you have?",
+  "topic_music": "Music & Podcasts",
+  "topic_travel": "Travel & Places",
+  "topic_tech": "Tech & Apps",
+  "topic_memes": "Memes & Random stuff",
+  "topic_coffee": "Best coffee spots",
+  "topic_food": "Food & Restaurants",
+  "topic_work": "Work & Side projects",
+  "topic_books": "Books & Reading",
+  "topic_studies": "Exams & Modules",
+  "topic_career": "Career & Jobs",
+  "topic_gaming": "Games & Anime",
+  "topic_sports": "Sports & Fitness",
+  "topic_shows": "Shows & Netflix",
+  "topic_vibes": "Just vibing 😎"
 }
 

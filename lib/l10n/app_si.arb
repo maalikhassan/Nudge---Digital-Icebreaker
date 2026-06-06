@@ -20,5 +20,20 @@
   "chatStarted": "ගොඩයි! 👇",
   "topicChosen": "ඔබ තෝරාගත්තේ:",
   "startOver": "නැවත පටන් ගන්න",
-  "handoverHint": "ඔවුන්ට දෙන්න →"
+  "handoverHint": "ඔවුන්ට දෙන්න →",
+  "howMuchTime": "ඔබට කොපමණ වේලාවක් තිබේද?",
+  "topic_music": "සංගීතය",
+  "topic_travel": "ගමන් යාම",
+  "topic_tech": "තාක්ෂණය",
+  "topic_memes": "මීම් සහ විනෝදය",
+  "topic_coffee": "කෝපි ස්ථාන",
+  "topic_food": "ආහාර",
+  "topic_work": "රැකියා",
+  "topic_books": "පොත්",
+  "topic_studies": "විභාග",
+  "topic_career": "වෘත්තීය",
+  "topic_gaming": "ක්‍රීඩා",
+  "topic_sports": "ක්‍රීඩා",
+  "topic_shows": "ටෙලිවිෂන්",
+  "topic_vibes": "ලිහිල් කතාව"
 }

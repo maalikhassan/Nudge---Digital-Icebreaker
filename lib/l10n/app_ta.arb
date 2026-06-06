@@ -20,5 +20,20 @@
   "chatStarted": "சரி! 👇",
   "topicChosen": "நீங்கள் தேர்ந்தெடுத்தது:",
   "startOver": "மீண்டும் தொடங்கு",
-  "handoverHint": "அவர்களிடம் கொடுங்கள் →"
+  "handoverHint": "அவர்களிடம் கொடுங்கள் →",
+  "howMuchTime": "உங்களுக்கு எவ்வளவு நேரம் உள்ளது?",
+  "topic_music": "இசை",
+  "topic_travel": "பயணம்",
+  "topic_tech": "தொழில்நுட்பம்",
+  "topic_memes": "மீம்கள்",
+  "topic_coffee": "காபி இடங்கள்",
+  "topic_food": "உணவு",
+  "topic_work": "வேலை",
+  "topic_books": "புத்தகங்கள்",
+  "topic_studies": "படிப்பு",
+  "topic_career": "தொழில்",
+  "topic_gaming": "கேமிங்",
+  "topic_sports": "விளையாட்டு",
+  "topic_shows": "தொடர்கள்",
+  "topic_vibes": "சாதாரண பேச்சு"
 }

@@ -71,4 +71,49 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get handoverHint => 'அவர்களிடம் கொடுங்கள் →';
+
+  @override
+  String get howMuchTime => 'உங்களுக்கு எவ்வளவு நேரம் உள்ளது?';
+
+  @override
+  String get topic_music => 'இசை';
+
+  @override
+  String get topic_travel => 'பயணம்';
+
+  @override
+  String get topic_tech => 'தொழில்நுட்பம்';
+
+  @override
+  String get topic_memes => 'மீம்கள்';
+
+  @override
+  String get topic_coffee => 'காபி இடங்கள்';
+
+  @override
+  String get topic_food => 'உணவு';
+
+  @override
+  String get topic_work => 'வேலை';
+
+  @override
+  String get topic_books => 'புத்தகங்கள்';
+
+  @override
+  String get topic_studies => 'படிப்பு';
+
+  @override
+  String get topic_career => 'தொழில்';
+
+  @override
+  String get topic_gaming => 'கேமிங்';
+
+  @override
+  String get topic_sports => 'விளையாட்டு';
+
+  @override
+  String get topic_shows => 'தொடர்கள்';
+
+  @override
+  String get topic_vibes => 'சாதாரண பேச்சு';
 }

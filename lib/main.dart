@@ -5,8 +5,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'l10n/app_localizations.dart';
 import 'providers/nudge_provider.dart';
 import 'screens/home_screen.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+
+Future<void> main() async {
+  await dotenv.load(fileName: ".env");
   runApp(const NudgeApp());
 }
 

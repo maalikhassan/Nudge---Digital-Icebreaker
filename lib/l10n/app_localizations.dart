@@ -225,6 +225,96 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Hand the phone to them →'**
   String get handoverHint;
+
+  /// No description provided for @howMuchTime.
+  ///
+  /// In en, this message translates to:
+  /// **'How much time do you have?'**
+  String get howMuchTime;
+
+  /// No description provided for @topic_music.
+  ///
+  /// In en, this message translates to:
+  /// **'Music & Podcasts'**
+  String get topic_music;
+
+  /// No description provided for @topic_travel.
+  ///
+  /// In en, this message translates to:
+  /// **'Travel & Places'**
+  String get topic_travel;
+
+  /// No description provided for @topic_tech.
+  ///
+  /// In en, this message translates to:
+  /// **'Tech & Apps'**
+  String get topic_tech;
+
+  /// No description provided for @topic_memes.
+  ///
+  /// In en, this message translates to:
+  /// **'Memes & Random stuff'**
+  String get topic_memes;
+
+  /// No description provided for @topic_coffee.
+  ///
+  /// In en, this message translates to:
+  /// **'Best coffee spots'**
+  String get topic_coffee;
+
+  /// No description provided for @topic_food.
+  ///
+  /// In en, this message translates to:
+  /// **'Food & Restaurants'**
+  String get topic_food;
+
+  /// No description provided for @topic_work.
+  ///
+  /// In en, this message translates to:
+  /// **'Work & Side projects'**
+  String get topic_work;
+
+  /// No description provided for @topic_books.
+  ///
+  /// In en, this message translates to:
+  /// **'Books & Reading'**
+  String get topic_books;
+
+  /// No description provided for @topic_studies.
+  ///
+  /// In en, this message translates to:
+  /// **'Exams & Modules'**
+  String get topic_studies;
+
+  /// No description provided for @topic_career.
+  ///
+  /// In en, this message translates to:
+  /// **'Career & Jobs'**
+  String get topic_career;
+
+  /// No description provided for @topic_gaming.
+  ///
+  /// In en, this message translates to:
+  /// **'Games & Anime'**
+  String get topic_gaming;
+
+  /// No description provided for @topic_sports.
+  ///
+  /// In en, this message translates to:
+  /// **'Sports & Fitness'**
+  String get topic_sports;
+
+  /// No description provided for @topic_shows.
+  ///
+  /// In en, this message translates to:
+  /// **'Shows & Netflix'**
+  String get topic_shows;
+
+  /// No description provided for @topic_vibes.
+  ///
+  /// In en, this message translates to:
+  /// **'Just vibing 😎'**
+  String get topic_vibes;
 }
 
 class _AppLocalizationsDelegate

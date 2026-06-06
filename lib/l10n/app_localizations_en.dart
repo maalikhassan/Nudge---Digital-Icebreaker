@@ -71,4 +71,49 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get handoverHint => 'Hand the phone to them →';
+
+  @override
+  String get howMuchTime => 'How much time do you have?';
+
+  @override
+  String get topic_music => 'Music & Podcasts';
+
+  @override
+  String get topic_travel => 'Travel & Places';
+
+  @override
+  String get topic_tech => 'Tech & Apps';
+
+  @override
+  String get topic_memes => 'Memes & Random stuff';
+
+  @override
+  String get topic_coffee => 'Best coffee spots';
+
+  @override
+  String get topic_food => 'Food & Restaurants';
+
+  @override
+  String get topic_work => 'Work & Side projects';
+
+  @override
+  String get topic_books => 'Books & Reading';
+
+  @override
+  String get topic_studies => 'Exams & Modules';
+
+  @override
+  String get topic_career => 'Career & Jobs';
+
+  @override
+  String get topic_gaming => 'Games & Anime';
+
+  @override
+  String get topic_sports => 'Sports & Fitness';
+
+  @override
+  String get topic_shows => 'Shows & Netflix';
+
+  @override
+  String get topic_vibes => 'Just vibing 😎';
 }

@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../l10n/app_localizations.dart';
 import '../providers/nudge_provider.dart';
 import 'scenario_screen.dart';
+import 'history_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -113,6 +114,20 @@ class _HomeScreenState extends State<HomeScreen>
                   child: Text(
                     l10n.selectScenario,
                     style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                const SizedBox(height: 16),
+                OutlinedButton.icon(
+                  style: OutlinedButton.styleFrom(
+                    foregroundColor: Colors.white70,
+                    side: const BorderSide(color: Colors.white30),
+                    minimumSize: const Size(double.infinity, 46),
+                  ),
+                  icon: const Icon(Icons.history_rounded, size: 18),
+                  label: const Text('My Nudge History'),
+                  onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const HistoryScreen()),
                   ),
                 ),
               ],
